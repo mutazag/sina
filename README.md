@@ -8,7 +8,7 @@ Social and Information Network Analysis subject - Graph and Network Analytics
 
 ## Clustering coefficient for a vertix
 
-Is the proportion of linkes between the verticies within its neighbourhood divided by the number of links that could possibly exist between them. 
+Is the proportion of links between the verticies within its neighbourhood divided by the number of links that could possibly exist between them. 
 
 if k is the number of verticies in the neighbourhood
 then number of links (edges) that could possibly exist is k(k-1)/2
