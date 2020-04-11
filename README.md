@@ -48,6 +48,8 @@ nx.clustering(G)
 
 ## bipartite graph with colors
 
+using the bipartite argument to denote bipartite sets 0 or 1 for nodes, then create edges from nodes in one set to the other
+
 ```python
 G = nx.Graph()
 G.add_nodes_from([1,2,3,4], bipartite=0)
@@ -57,7 +59,20 @@ G.add_edges_from([(1,5),(1,7),(1,8)])
 G.add_edges_from([(2,6),(2,7),(2,8)])
 G.add_edges_from([(3,5)])
 G.add_edges_from([(4,8),(4,7)])
+```
 
+
+the graph visualisation may not draw in the commonly know bipartite layout
+
+![bipartite](images/01-bipartite1.png)
+
+so here we identify the two sets X and Y, then give them positions in two columns and assign colors. 
+
+calling the drawing function again with postion list and color list will produce a familiar bipartite network layout
+
+we could potentilly have added attributes to the nodes when constructing the graph to indicate positions and colors or set memberships then used these additional attributes in drawing the graph, to be explored later (maybe!). 
+
+```
 X, Y = bipartite.sets(G)
 
 pos =dict([(n, (2, i)) for i, n in enumerate(Y)] + [(n, (1, i)) for i, n in enumerate(X)])
@@ -65,4 +80,14 @@ pos =dict([(n, (2, i)) for i, n in enumerate(Y)] + [(n, (1, i)) for i, n in enum
 color_map = [ "red" if n in X else "blue" for n in G.nodes()]
 
 nx.draw_networkx(G,pos=pos,node_color=color_map)
+```
+
+![bipartite](images/01-bipartite2.png)
+
+To test if graph is bipartite, we could use the function `networkx.is_bipartite()`. Returns True if set is bipartite. 
+
+```python
+nx.is_bipartite(G)
+
+> True
 ```
