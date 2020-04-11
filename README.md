@@ -44,3 +44,25 @@ nx.clustering(G)
     links in neighbourhood = 3 
 
     => clustering coeeff for node 1 = 3/21 = 0.14286
+
+
+## bipartite graph with colors
+
+```python
+G = nx.Graph()
+G.add_nodes_from([1,2,3,4], bipartite=0)
+G.add_nodes_from([5,6,7,8], bipartite=1)
+
+G.add_edges_from([(1,5),(1,7),(1,8)])
+G.add_edges_from([(2,6),(2,7),(2,8)])
+G.add_edges_from([(3,5)])
+G.add_edges_from([(4,8),(4,7)])
+
+X, Y = bipartite.sets(G)
+
+pos =dict([(n, (2, i)) for i, n in enumerate(Y)] + [(n, (1, i)) for i, n in enumerate(X)])
+
+color_map = [ "red" if n in X else "blue" for n in G.nodes()]
+
+nx.draw_networkx(G,pos=pos,node_color=color_map)
+```
