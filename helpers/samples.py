@@ -32,6 +32,12 @@ class graph1():
         }
         self.labels = {c:f'${c}$' for i,c in enumerate(self.nodes)}
 
+    def Get_Networkx_Graph(self):
+        G = nx.Graph()
+        G.add_nodes_from(self.nodes)
+        G.add_edges_from(self.edges)
+        return(G)
+
 
 
 if __name__ == '__main__':
