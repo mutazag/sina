@@ -12,7 +12,7 @@ class SampleGraph():
             ('A', 'B'), ('A', 'C')]
         self.pos = {
             'A': (2, 3),
-            'B': (3, 3), 
+            'B': (3, 3),
             'C': (3, 2)
         }
         self.labels = {c: f'${c}$' for i, c in enumerate(self.nodes)}
@@ -82,6 +82,7 @@ class graph1(SampleGraph):
         # add edges
         nx.draw_networkx_edges(self.G, self.pos, width=1.5, alpha=0.5, edge_color='g')
         return
+
 
 if __name__ == '__main__':
     print('sample graph')
