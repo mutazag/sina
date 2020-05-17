@@ -1,0 +1,17 @@
+{
+    "python.pythonPath": "C:\\Python\\Python38\\python.exe",
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+        "--ignore=W605"
+    ],
+    "python.linting.pycodestyleEnabled": false
+}
