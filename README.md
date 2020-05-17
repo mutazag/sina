@@ -91,3 +91,8 @@ nx.is_bipartite(G)
 
 > True
 ```
+
+## Collaborative Filtering 
+
+Examples in python: 
+- Concepts and Surprise package: (https://towardsdatascience.com/various-implementations-of-collaborative-filtering-100385c6dfe0)
