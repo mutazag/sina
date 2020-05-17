@@ -11,9 +11,9 @@ class SampleGraph():
         self.edges = [
             ('A', 'B'), ('A', 'C')]
         self.pos = {
-            'A': (2, 3),
-            'B': (3, 3),
-            'C': (3, 2)
+            'A': (1, 1.5),
+            'B': (2, 1),
+            'C': (2, 2)
         }
         self.labels = {c: f'${c}$' for i, c in enumerate(self.nodes)}
         self.G = None
