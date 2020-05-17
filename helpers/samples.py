@@ -86,3 +86,20 @@ class graph1(SampleGraph):
 
 if __name__ == '__main__':
     print('sample graph')
+
+
+class closeness_centrality_graph(SampleGraph):
+    def __init__(self):
+        self.data = []
+        self.nodes = 'ABCDE'
+        self.edges = [
+            ('A', 'B'), ('B', 'C'), ('C', 'D'), ('D', 'E')]
+        self.pos = {
+            'A': (1, 1),
+            'B': (2, 1),
+            'C': (3, 1),
+            'D': (4, 1),
+            'E': (5, 1)
+        }
+        self.labels = {c: f'${c}$' for i, c in enumerate(self.nodes)}
+        self.G = None
