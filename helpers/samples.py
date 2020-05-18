@@ -103,3 +103,30 @@ class closeness_centrality_graph(SampleGraph):
         }
         self.labels = {c: f'${c}$' for i, c in enumerate(self.nodes)}
         self.G = None
+
+
+class at1q3(SampleGraph): 
+    def __init__(self): 
+        SampleGraph.__init__(self)
+        self.data = []
+        self.nodes = 'ABCDEFG'
+        self.edges = [
+            ('A','G'), ('A','F'),('A','E'),('A','D'),
+            ('B','F'), ('B','E'),('B','D'),('B','C'),
+            ('C','E'),('C','D'),
+            ('D','E'),
+            ('E','F'),('E','G'),
+            ('F','G')
+            #('G')
+        ]
+        self.pos = {
+            'A': (1,1), 
+            'B': (3,2),
+            'C': (3,1), 
+            'D': (2,1), 
+            'E': (2,2),
+            'F': (2,3), 
+            'G': (1,2)
+        }
+        self.labels = {c: f'${c}$' for i, c in enumerate(self.nodes)}
+        self.G = None
