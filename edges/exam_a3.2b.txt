@@ -1,0 +1,6 @@
+I: G,K,H,J,L 
+J: I,L,H
+K: I,G,H
+H: I,J,K,G
+G: I,K,H
+L: I,J
